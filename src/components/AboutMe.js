@@ -1,6 +1,6 @@
 const AboutMe = () => {
   return (
-    <div class="card card-side bg-base-100 shadow-xl">
+    <div class="card card-side bg-base-100 ">
    <figure><img src ="https://user-images.githubusercontent.com/122588135/219527503-a46e0315-17dc-4654-920f-dc1a8409df5c.jpg" alt="picture of liza smirnov"/></figure>
   <div id='AboutMe' class="card-body">
     <h1 class="card-title text-3xl">Bio</h1>

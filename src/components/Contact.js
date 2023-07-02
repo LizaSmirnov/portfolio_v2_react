@@ -34,7 +34,7 @@ function Contact() {
   };
 
   return (
-    <div class='card card-side bg-base-100 shadow-xl'>
+    <div class='card card-side bg-base-100 shadow-xl justify-center'>
     <form onSubmit={handleSubmit}>
       <div>
         

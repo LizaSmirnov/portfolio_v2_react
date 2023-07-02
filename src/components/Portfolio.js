@@ -1,9 +1,37 @@
-const Portfolio = () => {
+const DownloadButton = () => {
+  const handleDownload = () => {
+    // Replace "path/to/your/document.docx" with the actual file path
+    const filePath = "path/to/your/document.docx";
+    window.location.href = filePath;
+  };
+
+  return (
+    <button class="btn btn-primary" onClick={handleDownload}>
+      Download 
+    </button>
+  );
+};
+
+
+ 
+
+
+
+
+
+const Portfolio= () => {
     return (
+      <div class="card ">
+      <div class="card-body">
+        <h2 class="card-title justify-center text-3xl">My Resume</h2>
+        <div class="card-actions justify-center">
+          <DownloadButton />
+        </div>
+      </div>
         <div class='card-item h-full'>
-          <h2 className="portfolio rounded-box">Portfolio</h2>
+          <h2 className="portfolio flex justify-center items-center" style={{ paddingTop: '20px' }}>Portfolio</h2>
           
-      <div class="h-96 carousel carousel-vertical rounded-box">
+      <div class="h-96 carousel carousel-vertical">
       <div class="carousel-item h-full">
           <a target="_blank" rel="noopener" href="https://github.com/LizaSmirnov/professional_portfolio">
               <div class="image-container">
@@ -52,20 +80,9 @@ const Portfolio = () => {
               </div>
           </a>
         </div>
-      </div>
-      
-      <div class="card w-96 glass">
-      <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="car!"/></figure>
-      <div class="card-body">
-        <h2 class="card-title">My Resumer</h2>
-        <div class="card-actions justify-end">
-          <button class="btn btn-primary">Download for Viewing</button>
-        </div>
-      </div>
-    </div>
-    </div>
-      
-
+</div>
+</div>
+</div>
     );
     }
 
