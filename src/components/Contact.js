@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import nodemailer from 'nodemailer';
 
 function Contact() {
   const [name, setName] = useState('');
@@ -25,13 +26,31 @@ function Contact() {
 
   const validateEmail = (email) => {
     // Regular expression for email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     if (!emailRegex.test(email)) {
       setError('INVALID EMAIL ADDRESS.');
     } else {
       return emailRegex.test(email);
     }
   };
+
+  async function sendEmail(data) {
+    try {
+      // Define the email template
+      const mailOptions = {
+        from: 'lizasmirnov4@gmail.com',
+        to: `setEmail`,
+        // subject: data.subject,
+        text: data.message,
+      };
+  
+      // Send the email
+      await transporter.sendMail(mailOptions);
+      console.log('Email sent successfully!');
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
+  }
 
   return (
     <div class='card card-side bg-base-100 shadow-xl justify-center'>
@@ -73,8 +92,10 @@ function Contact() {
         >
         </textarea>
           {error && <p className="error">{error}</p>}
+      </div >
+      <div class="flex justify-center items-center">
+      <button class="btn btn-outline btn-secondary max-w-xs justify-center" onClick={sendEmail}>Submit</button>
       </div>
-      <button class="btn btn-outline btn-secondary max-w-xs">Submit</button>
     </form>
     </div>
   );
