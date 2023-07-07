@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import nodemailer from 'nodemailer';
+
 
 function Contact() {
   const [name, setName] = useState('');
@@ -33,24 +33,6 @@ function Contact() {
       return emailRegex.test(email);
     }
   };
-
-  async function sendEmail(data) {
-    try {
-      // Define the email template
-      const mailOptions = {
-        from: 'lizasmirnov4@gmail.com',
-        to: `setEmail`,
-        // subject: data.subject,
-        text: data.message,
-      };
-  
-      // Send the email
-      await transporter.sendMail(mailOptions);
-      console.log('Email sent successfully!');
-    } catch (error) {
-      console.error('Error sending email:', error);
-    }
-  }
 
   return (
     <div class='card card-side bg-base-100 shadow-xl justify-center'>
@@ -94,7 +76,7 @@ function Contact() {
           {error && <p className="error">{error}</p>}
       </div >
       <div class="flex justify-center items-center">
-      <button class="btn btn-outline btn-secondary max-w-xs justify-center" onClick={sendEmail}>Submit</button>
+      <button class="btn btn-outline btn-secondary max-w-xs justify-center" >Submit</button>
       </div>
     </form>
     </div>

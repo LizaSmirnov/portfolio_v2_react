@@ -8,6 +8,7 @@ import ReactDOM from 'react-dom/client';
 //  App is a component that we made up
 import './index.css';
 import App from './App';
+import { ThemeProvider } from './ThemeProvider';
 
 // Entry point
 // The webpack configuration of react is using src/index.js as its entry point
@@ -17,5 +18,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 // Actually rendering our application
 root.render(
-  <App/>
+  <ThemeProvider>
+    <App/>
+  </ThemeProvider>
   );

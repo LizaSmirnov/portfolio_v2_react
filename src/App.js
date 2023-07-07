@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { Helmet } from "react-helmet";
-import Nodemailer from 'nodemailer';
+// import Nodemailer from 'nodemailer';
 
 import Navbar from "./components/Navbar";
 import AboutMe from "./components/AboutMe";
@@ -8,18 +8,15 @@ import Portfolio from "./components/Portfolio";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import "./App.css";
+import { ThemeContext } from "./ThemeProvider";
 
 const App = () => {
-
-  useEffect(() => {
-    //   we can make side effects inside here
-  }, []);
+const {theme} = useContext(ThemeContext);  
 
   return (
     <>
-    
      <Helmet>
-     <html lang="en" data-theme="cupcake" />
+     <html lang="en" data-theme={theme} />
    </Helmet>
     <Navbar />
     <AboutMe />
