@@ -43,7 +43,7 @@ function Contact() {
           type="text"
           id="name"
           placeholder="Name" 
-          class="input input-bordered input-secondary w-full max-w-xs"
+          class="input input-bordered input-primary w-full max-w-xs"
           onChange={(e) => setName(e.target.value)}
           onBlur={handleBlur}
           required
@@ -55,7 +55,7 @@ function Contact() {
           type="email"
           id="email"
           placeholder="Email Address" 
-          class="input input-bordered input-secondary w-full max-w-xs"
+          class="input input-bordered input-primary w-full max-w-xs"
           onChange={(e) => setEmail(e.target.value)}
           onBlur={handleBlur}
           verify={validateEmail}
@@ -67,7 +67,7 @@ function Contact() {
         <textarea
           id="message"
           placeholder="Message to me" 
-          class="input input-bordered input-secondary w-full max-w-xs"
+          class="input input-bordered input-primary w-full max-w-xs"
           onChange={(e) => setMessage(e.target.value)}
           onBlur={handleBlur}
           required
@@ -76,7 +76,7 @@ function Contact() {
           {error && <p className="error">{error}</p>}
       </div >
       <div class="flex justify-center items-center">
-      <button class="btn btn-outline btn-secondary max-w-xs justify-center" >Submit</button>
+      <button class="btn btn-outline btn-primary max-w-xs justify-center" >Submit</button>
       </div>
     </form>
     </div>

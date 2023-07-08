@@ -3,7 +3,7 @@ import { ThemeContext } from "../ThemeProvider";
 const Navbar = () => {
   const {theme,changeTheme} = useContext(ThemeContext);
   return (
-    <div className="navbar bg-secondary rounded-box">
+    <div className="navbar bg-primary rounded-box">
     <div className="navbar-start">
       <div className="dropdown">
         <label tabIndex={0} className="btn btn-ghost btn-circle">
@@ -24,7 +24,7 @@ const Navbar = () => {
     <div class="form-control">
   <label class="label cursor-pointer">
     <span class="label-text" >Dark Mode</span> 
-    <input type="checkbox" class="toggle toggle-primary" checked onClick={()=>theme === "dark" ? changeTheme("cupcake"): changeTheme("dark")}/>
+    <input type="checkbox" class="toggle toggle-primary" checked onClick={()=>theme === "dark" ? changeTheme("corporate"): changeTheme("dark")}/>
   </label>
 </div>
     </div>
