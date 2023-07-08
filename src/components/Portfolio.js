@@ -1,7 +1,7 @@
 const DownloadButton = () => {
   const handleDownload = () => {
     // Replace "link-to-your-google-docs-file" with the actual Google Docs link
-    const fileUrl = "https://docs.google.com/document/d/1_3V0JTNbR5g7-JvYwKB0iVuq9R8twpjxU7L1fG0c2pI/edit?usp=sharing";
+    const fileUrl = "https://docs.google.com/document/d/1_3V0JTNbR5g7-JvYwKB0iVuq9R8twpjxU7L1fG0c2pI/export?format=pdf";
   
     // Create a temporary anchor element
     const downloadLink = document.createElement("a");
