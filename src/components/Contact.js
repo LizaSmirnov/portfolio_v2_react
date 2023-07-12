@@ -38,7 +38,7 @@ function Contact() {
     <div class='card card-side bg-base-100 shadow-xl justify-center'>
     <form onSubmit={handleSubmit}>
       <div>
-        
+      <h2 class="card-title btn-outline btn-accent justify-center text-2xl">Contact</h2>
         <input
           type="text"
           id="name"
