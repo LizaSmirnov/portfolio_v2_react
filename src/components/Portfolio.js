@@ -44,16 +44,16 @@ const handleView = () => {
 
 const Portfolio= () => {
     return (
-      <div class="card ">
+      <div class="card">
       <div class="card-body">
-        <h2 class="card-title justify-center text-5xl">My Resume</h2>
+        <button class="card-title btn-outline btn-accent justify-center text-4xl">My Resume</button>
         <div class="card-actions justify-center">
           <ViewButton />
           <DownloadButton />
         </div>
       </div>
         <div class='card-item h-full'>
-          <h2 className="card-title flex justify-center items-center te" style={{ paddingTop: '5px' }}>Portfolio</h2>
+          <h1 className="card-title btn-outline btn-accent justify-center items-center text-4xl" style={{padding:'10px'}}>Portfolio</h1>
           <p class='portfolio sub-title bg-primary text-center'>Please scroll through the Projects</p>
       <div class="h-96 carousel carousel-vertical">
       <div class="carousel-item h-full">
